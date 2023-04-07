@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="../public/assests/fevicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="main">
+       <img src="../assets/creop.png" alt="logo.png">
+       <h1>Sign In</h1>
+       <h3>sign in and start your candidates!</h3>
+       <form action="/login" method="post">
+        <input  type="email" placeholder="enter your Email" name="email"  id ="email"value="<%=locals.email %>" required >
+        <input type="password" placeholder="enter your passward" name="passward" id="passward" required>
+                <p class="error"> <%=locals.message%> </p>
+       <div class="checkbox"><input type="checkbox"><span>Remember me</span></div>
+        <button id="loginbtn" type="submit">Login</button>
+        <button id="guestbtn" onclick="lw()">Guest Login</button>
+       </form>
+
+    </div>
+    <script>
+         function lw(){
+document.getElementById("email").value="aloktamrakar2@gmail.com";
+document.getElementById("passward").value="aloktamrakar";
+        }  
+    </script>
+</body>
+</html>
